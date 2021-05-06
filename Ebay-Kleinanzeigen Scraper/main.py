@@ -45,10 +45,10 @@ page = response.content
 soup = BeautifulSoup(page, "html.parser")
 
 # Setzt die Search-Results-Content in eine Variable.
-srchRsltsContent = soup.find("div", id="srchrslt-content")
+srchRsltsContent = soup.find("ul", id="srchrslt-adtable")
 
 # Setzt die Einträge inheralb der Seach-Results und dem Table dortdrinn in eine Variable / Array.
-srchRslts = soup.find_all("li")
+srchRslts = srchRsltsContent.find_all("li")
 
 # Setzt einen Counter.
 counter = 0
